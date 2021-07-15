@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PinDestroyer : MonoBehaviour
 {
-    public GameObject adder, remover;
     // Start is called before the first frame update
     void Start()
     {
@@ -12,21 +11,11 @@ public class PinDestroyer : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        adder.SetActive(false);
-        remover.SetActive(true);
+        PinControl.Instance.ToRemoveButton(gameObject.name);
     }
     private void OnTriggerExit2D(Collider2D other) {
-        adder.SetActive(true);
-        remover.SetActive(false);
+        PinControl.Instance.ToAddButton();
     }
 
-    public void destroyer(){
-        Destroy(gameObject);
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

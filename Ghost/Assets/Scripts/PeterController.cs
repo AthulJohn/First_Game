@@ -5,6 +5,17 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.EventSystems;
 
+
+/*
+Restrictor variable used to restrict controls as follow:
+restrictor value = 1: No Restrictions
+restrictor value = 2: Only Forward Motion
+restrictor value = 3: Only Right Motion
+restrictor value = 5: Only Backward Motion
+restrictor value = 7: Only Left Motion
+restrictor value = 11: Fully Restricted
+*/
+
 public class PeterController : MonoBehaviour 
 {
     private static PeterController _Instance;
