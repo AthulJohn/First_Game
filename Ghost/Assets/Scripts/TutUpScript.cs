@@ -21,7 +21,7 @@ public class TutUpScript : MonoBehaviour
         SwipeTest();
         if(Input.GetKeyDown(KeyCode.W))
         {
-          
+          Time.timeScale=1f;
           Destroy(gameObject);
         }
     }
@@ -60,7 +60,7 @@ float positiveX = Mathf.Abs(dragVector.x);
   {
     
     if(dragVector.y > 0)
-    {
+    {Time.timeScale=1f;
         Destroy(gameObject);
     }
   }

@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class WinMenu : MonoBehaviour
 {
 public bool victory=false;
-
+public GameObject Menu;
+    
 ProgressData pd;
 int level=0;
     private void Start() {
@@ -17,14 +18,13 @@ level=pd.level;
          }
         if(victory&&level<SceneManager.GetActiveScene().buildIndex)
          {
-             int adder=0;
+         int adder=0;
          if(SceneManager.GetActiveScene().buildIndex==13)
          adder=1;
          pd.updatelevel(SceneManager.GetActiveScene().buildIndex+adder);
          SaveAndLoad.SaveData(pd);
          } 
     }
-    public GameObject Menu;
     public void Quit(){
         SceneManager.LoadScene(0);
     }

@@ -12,24 +12,24 @@ public class Settings : MonoBehaviour
     bool value=true;
     ProgressData pd;
 
-    private void Start() {
-        backtog=BackgroundToggle.GetComponent<Toggle>();
-        swipetog=SwipeToggle.GetComponent<Toggle>();
+    private void Awake() {
         pd=SaveAndLoad.LoadData();
         backtog.isOn=pd.backgroundSoundEnabled;
         swipetog.isOn=pd.swipeSoundEnabled;
-        Debug.Log(pd.backgroundSoundEnabled);
-        Debug.Log(pd.swipeSoundEnabled);
         
     }
         
+    private void Start() {
+        
+        backtog=BackgroundToggle.GetComponent<Toggle>();
+        swipetog=SwipeToggle.GetComponent<Toggle>();
+    }    
     public void ChangeBackgroundSound()
     {
         value=BackgroundToggle.GetComponent<Toggle>().isOn;
 
         pd=SaveAndLoad.LoadData();
         pd.updateBGS(value);
-        Debug.Log(pd.backgroundSoundEnabled);
         SaveAndLoad.SaveData(pd);
          
     }
@@ -40,7 +40,6 @@ public class Settings : MonoBehaviour
 
         pd=SaveAndLoad.LoadData();
         pd.updateSS(value);
-        Debug.Log(pd.swipeSoundEnabled);
         SaveAndLoad.SaveData(pd);
     }
 }

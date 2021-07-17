@@ -24378,7 +24378,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 17
+      m_TileSpriteIndex: 18
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -24603,10 +24603,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: d56a2af0b87459e4bb880713898070a6, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: d56a2af0b87459e4bb880713898070a6, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300004, guid: b00b9ff8e2a7f494c9679b0b59c599bb, type: 3}
   - m_RefCount: 3
@@ -24898,10 +24898,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -24.104874, y: 6.934782}
-      - {x: -25.414988, y: -20.943083}
+    - - {x: -29.570349, y: 13.342581}
+      - {x: -28.674833, y: -23.224974}
+      - {x: 12.206392, y: -23.636185}
       - {x: 11.936083, y: -20.698978}
-      - {x: 12.153255, y: 8.739821}
+      - {x: 12.0228615, y: 12.521241}
 --- !u!4 &1124155994
 Transform:
   m_ObjectHideFlags: 0
