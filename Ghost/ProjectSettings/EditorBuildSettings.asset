@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels.unity
     guid: 9ef9cc596e41b624aaa377480c2cc333
   - enabled: 1
+    path: Assets/Scenes/Level Random.unity
+    guid: 60095f6b632abaf40813522414a70ce2
+  - enabled: 1
     path: Assets/Scenes/ForestLevels/Level F_A.unity
     guid: 30301eda0091497479dca1c6b0014ce6
   - enabled: 1

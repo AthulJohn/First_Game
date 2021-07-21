@@ -25,4 +25,10 @@ public class TextControl : MonoBehaviour
         textOb.text=" " +(Math.Floor(timeLeft/60)).ToString("00")+":"+ (timeLeft%60).ToString("00");
         
     }
+
+    public void Reset(){
+        finalTime=Time.time+TotalTime;
+        
+        Time.timeScale=1f;
+    }
 }

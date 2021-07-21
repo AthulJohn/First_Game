@@ -12,6 +12,7 @@ public class MainMenu : MonoBehaviour
     public GameObject loadingScreen;
     public Slider slider;
 
+
    void Update(){
        if (Input.GetKey(KeyCode.Escape))
             {
@@ -31,18 +32,23 @@ public class MainMenu : MonoBehaviour
          
        aud.Play();
          pd=SaveAndLoad.LoadData(); 
-        StartCoroutine(LoadasAsync(pd.level+1));
+         if(pd.level<=27)
+        StartCoroutine(LoadasAsync(pd.level+2));
     }
+
+    public void RandomPlay( AudioSource aud){
+         
+       aud.Play();
+        StartCoroutine(LoadasAsync(2));
+    }
+
 
      IEnumerator LoadasAsync(int index)
     {
-            Debug.Log(index);
         AsyncOperation operation = SceneManager.LoadSceneAsync(index);
-            Debug.Log(operation.progress);
         loadingScreen.SetActive(true);
         while(!operation.isDone)
         {
-            Debug.Log(operation.progress);
             float progress = Mathf.Clamp01(operation.progress/0.9f);
             slider.value=progress;
             yield return null;

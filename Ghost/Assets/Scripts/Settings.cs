@@ -13,6 +13,9 @@ public class Settings : MonoBehaviour
     ProgressData pd;
 
     private void Awake() {
+        
+        backtog=BackgroundToggle.GetComponent<Toggle>();
+        swipetog=SwipeToggle.GetComponent<Toggle>();
         pd=SaveAndLoad.LoadData();
         backtog.isOn=pd.backgroundSoundEnabled;
         swipetog.isOn=pd.swipeSoundEnabled;
@@ -21,8 +24,6 @@ public class Settings : MonoBehaviour
         
     private void Start() {
         
-        backtog=BackgroundToggle.GetComponent<Toggle>();
-        swipetog=SwipeToggle.GetComponent<Toggle>();
     }    
     public void ChangeBackgroundSound()
     {

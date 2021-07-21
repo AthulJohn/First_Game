@@ -28,5 +28,14 @@ public static class SaveAndLoad
        else
        return new ProgressData(1,true,true);
     }
+    public static void ResetData()
+    {
+        string path=Application .persistentDataPath + "/progress.swen";
+
+        if(File.Exists(path))
+        {
+            File.Delete(path);
+        }
+    }
 
 }

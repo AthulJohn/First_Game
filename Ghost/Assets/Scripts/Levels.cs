@@ -19,7 +19,7 @@ public class Levels : MonoBehaviour
    
    public void GoToLevel(int level){
        aud.Play();
-        StartCoroutine(LoadasAsync(level+1));
+        StartCoroutine(LoadasAsync(level+2));
     }
     public void GoToHome(){
        aud.Play();

@@ -81,7 +81,7 @@ public class PeterController : MonoBehaviour
         }
          if (Input.GetKey(KeyCode.Escape))
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(0);
  
             }
         SwipeTest();
@@ -134,7 +134,7 @@ public class PeterController : MonoBehaviour
           verdir=h;
        }}
     }
-     void Backward(){
+    public void Backward(){
           if(!isTutorial||5%restrictor==0)
         {moving=false;
          animator.SetFloat("IsMoving", 0);}
