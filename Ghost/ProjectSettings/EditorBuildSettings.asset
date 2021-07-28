@@ -90,6 +90,18 @@ EditorBuildSettings:
     path: Assets/Scenes/HouseLevels/Level H_L.unity
     guid: 956b231f61ed4cf4a80d4e94ad22e115
   - enabled: 1
+    path: Assets/Scenes/Levels_B&W.unity
+    guid: 6ed5b54c686fdec4bbd9c957e43f23fa
+  - enabled: 1
+    path: Assets/Scenes/B&WLevels/Level B_A.unity
+    guid: ca4d2f4bf5484f247b3926336df2e8d2
+  - enabled: 1
+    path: Assets/Scenes/B&WLevels/Level B_B.unity
+    guid: ae90830c5ca16fe449faead53757cc09
+  - enabled: 1
+    path: Assets/Scenes/B&WLevels/Level B_C.unity
+    guid: da1b318079748934b944411ce35dd80d
+  - enabled: 1
     path: Assets/Scenes/Levels_City_Rush.unity
     guid: dd5bdf4a54dda8e41931b2b6eeff0b66
   - enabled: 1

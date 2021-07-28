@@ -11,7 +11,7 @@ public class FieldOfView : MonoBehaviour
         Mesh mesh = new Mesh();
         GetComponent<MeshFilter>().mesh=mesh;
     Vector3 origin=Vector3.zero;
-        float fov=90f;
+        float fov=360f;
         int rayCount=10;
         float angle=0f;
         float angleIncrease = fov/rayCount;
@@ -23,17 +23,20 @@ public class FieldOfView : MonoBehaviour
         vertices[0]=origin;
         int verIndex=1;
         int triIndex=0;
+        CompositeCollider2D[] colliders = Tilemap.FindObjectsOfType<CompositeCollider2D>();
         for(int i=0;i<=rayCount;i++)
         {
             Vector3 vertex;
             RaycastHit2D raycastHit=Physics2D.Raycast(origin,VecFromAngle(angle),viewDistance);
             
-            if(raycastHit.collider == null)
+                //||raycastHit.collider.name!="ShadowCaster2D"
+            if(raycastHit.collider== null)
             {
                  vertex = origin+ VecFromAngle(angle)*viewDistance;
             }
-            else
-            {
+            else 
+            {  Debug.Log(raycastHit.collider.gameObject);
+              
                 vertex=raycastHit.point;
                 Debug.Log(raycastHit.collider.name);
                 Debug.Log(vertex);

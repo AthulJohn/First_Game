@@ -55,6 +55,9 @@ TagManager:
   - name: BaseTileMap
     uniqueID: 3777979879
     locked: 0
+  - name: Ground
+    uniqueID: 3848700645
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

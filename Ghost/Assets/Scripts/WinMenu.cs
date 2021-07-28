@@ -23,29 +23,37 @@ level=pd.level;
         if(victory&&level<SceneManager.GetActiveScene().buildIndex)
          {
          int adder=0;
-         if(SceneManager.GetActiveScene().buildIndex==14)
+         if(SceneManager.GetActiveScene().buildIndex==14||SceneManager.GetActiveScene().buildIndex==27)
          adder=1;
          pd.updatelevel(SceneManager.GetActiveScene().buildIndex+adder);
          SaveAndLoad.SaveData(pd);
          } 
     }
+
+    
     public void Quit(){
         SceneManager.LoadScene(0);
     }
      public void NextLevel(){
          int adder=1;
-         if(SceneManager.GetActiveScene().buildIndex==14)
+         if(SceneManager.GetActiveScene().buildIndex==14||SceneManager.GetActiveScene().buildIndex==27)
          adder=2;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+adder);
     }
     public void Continue(){
         Menu.SetActive(false);
+        // OnClose();
         Time.timeScale=1f;
     }
-     public void Retry(){
+     public void ReRandom(){
          
         loadingScreen.SetActive(true);
              StartCoroutine(LoadasAsync(SceneManager.GetActiveScene().buildIndex));
+   
+    }
+    public void Retry(){
+         
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
    
     }
 

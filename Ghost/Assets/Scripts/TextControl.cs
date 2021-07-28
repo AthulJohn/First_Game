@@ -29,6 +29,7 @@ public class TextControl : MonoBehaviour
     public void Reset(){
         finalTime=Time.time+TotalTime;
         
+        textOb.color=Color.white;
         Time.timeScale=1f;
     }
 }
